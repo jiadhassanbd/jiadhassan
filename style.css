@@ -1,4 +1,8 @@
 /* Base Styles */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #121212;
   color: #f0f0f0;
@@ -6,11 +10,17 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 a {
   color: #00bcd4;
   text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #40e0d0;
 }
 
 h1, h2, h3 {
@@ -99,4 +109,27 @@ footer {
   background-color: #1f1f1f;
   margin-top: 2rem;
   color: #888888;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  section {
+    padding: 1.5rem;
+  }
+
+  ul {
+    padding-left: 1rem;
+  }
+
+  .testimonial {
+    padding-left: 0.75rem;
+  }
 }
